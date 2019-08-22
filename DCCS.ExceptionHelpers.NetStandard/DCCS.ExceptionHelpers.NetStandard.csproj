@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>1.1.1</Version>
+    <Authors>Michael Geramb</Authors>
+    <Company>DCCS GmbH</Company>
+    <Copyright>© DCCS GmbH. All rights reserved.</Copyright>
+    <Description>Provides helper functions for exceptions to get all exceptions in the InnerException hirachy and to build full messages out of it</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/DCCS-IT-Business-Solutions/DCCS.ExceptionHelpers.NetStandard</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/DCCS-IT-Business-Solutions/DCCS.ExceptionHelpers.NetStandard.git</RepositoryUrl>
+    <RepositoryType>GIT</RepositoryType>
+    <PackageTags>Exception Hirachy FullMessage Recursive</PackageTags>
+  </PropertyGroup>
+
+</Project>
