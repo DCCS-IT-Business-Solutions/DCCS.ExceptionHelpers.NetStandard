@@ -12,6 +12,7 @@
     <RepositoryUrl>https://github.com/DCCS-IT-Business-Solutions/DCCS.ExceptionHelpers.NetStandard.git</RepositoryUrl>
     <RepositoryType>GIT</RepositoryType>
     <PackageTags>Exception Hirachy FullMessage Recursive BuildCompleteMessage GetAllExceptionsInHirachy</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
 </Project>
