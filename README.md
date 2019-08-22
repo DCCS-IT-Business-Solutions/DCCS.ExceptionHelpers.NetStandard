@@ -34,7 +34,7 @@ Sample usage of the GetRecursiveMessage message:
 
 ```csharp
 // Add the namespace to your file to get the extension methods
-using DCCS.ExceptionHelpers.NetStandard.Tests;
+using DCCS.ExceptionHelpers.NetStandard;
 
 class Program
 {
