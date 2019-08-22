@@ -41,7 +41,7 @@ namespace DCCS.ExceptionHelpers.NetStandard.Tests
             }
             catch (Exception e)
             {
-                var message = e.GetRecursiveMessage(false);
+                var message = e.BuildCompleteMessage(false);
                 Assert.IsNotNull(message);
                 Assert.IsTrue(message.StartsWith($"Start program failed{Environment.NewLine}Read configuration failed{Environment.NewLine}")); // We check only the first part of the message, because the last part is depending on the installation an framework version
             }
@@ -57,7 +57,7 @@ namespace DCCS.ExceptionHelpers.NetStandard.Tests
             }
             catch (Exception e)
             {
-                var message = e.GetRecursiveMessage(false, "-");
+                var message = e.BuildCompleteMessage(false, "-");
                 Assert.IsNotNull(message);
                 Assert.IsTrue(message.StartsWith($"Start program failed-Read configuration failed-")); // We check only the first part of the message, because the last part is depending on the installation an framework version
             }

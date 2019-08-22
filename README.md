@@ -22,7 +22,7 @@ Available extension methods in this package:
 
 ```csharp
     // Return the message of the exception and all inner exceptions.
-    public static string GetRecursiveMessage(this Exception exception, bool includeCallstack, string separator = null)
+    public static string BuildCompleteMessage(this Exception exception, bool includeCallstack, string separator = null)
 
     // Returns the exception and all inner exceptions
     public static IEnumerable<Exception> GetAllExceptionsInHirachy(this Exception exception)
@@ -47,10 +47,10 @@ class Program
         catch (Exception e)
         {
             // Trace all exceptions in the stack including the call stack
-            Trace.WriteLine(e.GetRecursiveMessage(true));
+            Trace.WriteLine(e.BuildCompleteMessage(true));
                 
             // Write all exception messages to the console (without the call stack)
-            Console.WriteLine(e.GetRecursiveMessage(false)); 
+            Console.WriteLine(e.BuildCompleteMessage(false)); 
         }
     }
 

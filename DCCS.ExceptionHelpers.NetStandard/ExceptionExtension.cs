@@ -49,7 +49,7 @@ namespace DCCS.ExceptionHelpers.NetStandard
         /// <param name="includeCallstack">If true, the callstack will be included.</param>
         /// <param name="separator">separator for the messages. If null, <see>Environment.NewLine</see> will be used. This parameter will not be used for the formatting of the stacktrace. The stacktrace will always be added with new lines.</param>
         /// <returns>Whole message</returns>
-        public static string GetRecursiveMessage(this Exception exception, bool includeCallstack, string separator = null)
+        public static string BuildCompleteMessage(this Exception exception, bool includeCallstack, string separator = null)
         {
             if (separator == null)
                 separator = Environment.NewLine;
