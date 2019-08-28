@@ -6,12 +6,12 @@
     <Authors>Michael Geramb</Authors>
     <Company>DCCS GmbH</Company>
     <Copyright>© DCCS GmbH. All rights reserved.</Copyright>
-    <Description>Provides helper functions for exceptions to get all exceptions in the InnerException hirachy and to build full messages out of it</Description>
+    <Description>Provides helper functions for exceptions to get all exceptions in the InnerException hierarchy and to build full messages out of it</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/DCCS-IT-Business-Solutions/DCCS.ExceptionHelpers.NetStandard</PackageProjectUrl>
     <RepositoryUrl>https://github.com/DCCS-IT-Business-Solutions/DCCS.ExceptionHelpers.NetStandard.git</RepositoryUrl>
     <RepositoryType>GIT</RepositoryType>
-    <PackageTags>Exception Hirachy FullMessage Recursive BuildCompleteMessage GetAllExceptionsInHirachy</PackageTags>
+    <PackageTags>Exception Hierarchy FullMessage Recursive BuildCompleteMessage GetAllExceptionsInHierarchy</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 

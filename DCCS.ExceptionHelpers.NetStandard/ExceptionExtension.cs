@@ -17,14 +17,14 @@ namespace DCCS.ExceptionHelpers.NetStandard
         /// </summary>
         /// <param name="exception"></param>
         /// <returns>All exceptions</returns>
-        public static IEnumerable<Exception> GetAllExceptionsInHirachy(this Exception exception)
+        public static IEnumerable<Exception> GetAllExceptionsInHierarchy(this Exception exception)
         {
             yield return exception;
             if (exception is AggregateException aggregateException)
             {
                 foreach (var innerException in aggregateException.InnerExceptions)
                 {
-                    foreach (var inner in GetAllExceptionsInHirachy(innerException))
+                    foreach (var inner in GetAllExceptionsInHierarchy(innerException))
                     {
                         yield return inner;
                     }
@@ -34,7 +34,7 @@ namespace DCCS.ExceptionHelpers.NetStandard
             {
                 if (exception.InnerException != null)
                 {
-                    foreach (var inner in GetAllExceptionsInHirachy(exception.InnerException))
+                    foreach (var inner in GetAllExceptionsInHierarchy(exception.InnerException))
                     {
                         yield return inner;
                     }
@@ -54,13 +54,13 @@ namespace DCCS.ExceptionHelpers.NetStandard
             if (separator == null)
                 separator = Environment.NewLine;
             if (!includeCallstack)
-                return string.Join(separator, exception.GetAllExceptionsInHirachy().Select(ex => ex.Message));
+                return string.Join(separator, exception.GetAllExceptionsInHierarchy().Select(ex => ex.Message));
             else
             {
                 StringBuilder messageBuilder = new StringBuilder();
-                messageBuilder.Join(separator, exception.GetAllExceptionsInHirachy().Select(ex => ex.Message));
+                messageBuilder.Join(separator, exception.GetAllExceptionsInHierarchy().Select(ex => ex.Message));
                 messageBuilder.AppendLine();
-                messageBuilder.Join(Environment.NewLine, exception.GetAllExceptionsInHirachy().Select(ex => ex.StackTrace));
+                messageBuilder.Join(Environment.NewLine, exception.GetAllExceptionsInHierarchy().Select(ex => ex.StackTrace));
                 return messageBuilder.ToString();
             }
         }

@@ -1,5 +1,5 @@
 # DCCS.ExceptionHelpers.NetStandard [![Build status](https://ci.appveyor.com/api/projects/status/pqftt8hnwdv0cssp?svg=true)](https://ci.appveyor.com/project/mgeramb/dccs-exceptionhelpers-netstandard) [![NuGet Badge](https://buildstats.info/nuget/DCCS.ExceptionHelpers.NetStandard)](https://www.nuget.org/packages/DCCS.ExceptionHelpers.NetStandard/)
-Provides helper functions for exceptions to get all exceptions in the InnerException hirachy and to build full messages out of it.
+Provides helper functions for exceptions to get all exceptions in the InnerException hierarchy and to build full messages out of it.
 
 Note: The AggregateException which have multiple InnerExceptions will be handled too
 
@@ -25,7 +25,7 @@ Available extension methods in this package:
     public static string BuildCompleteMessage(this Exception exception, bool includeCallstack, string separator = null)
 
     // Returns the exception and all inner exceptions
-    public static IEnumerable<Exception> GetAllExceptionsInHirachy(this Exception exception)
+    public static IEnumerable<Exception> GetAllExceptionsInHierarchy(this Exception exception)
 ```
 
 ## Examples

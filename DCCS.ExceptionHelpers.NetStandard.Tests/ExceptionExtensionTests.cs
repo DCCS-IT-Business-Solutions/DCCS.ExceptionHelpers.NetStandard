@@ -11,7 +11,7 @@ namespace DCCS.ExceptionHelpers.NetStandard.Tests
     {
 
         [TestMethod]
-        public void TestHirachy()
+        public void TestHierarchy()
         {
             try
             {
@@ -20,7 +20,7 @@ namespace DCCS.ExceptionHelpers.NetStandard.Tests
             }
             catch(Exception e)
             {
-                var result = e.GetAllExceptionsInHirachy();
+                var result = e.GetAllExceptionsInHierarchy();
                 Assert.IsNotNull(result);
                 var exceptions = result.ToArray();
                 Assert.AreEqual(3, exceptions.Length);
